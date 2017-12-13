@@ -1,0 +1,1 @@
+Starting package to work with Vue and Vuex

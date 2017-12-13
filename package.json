@@ -1,0 +1,36 @@
+{
+  "name": "vue-get-started",
+  "version": "1.0.0",
+  "private": false,
+  "description": "Starting package to work with Vue and Vuex",
+  "main": "index.js",
+  "scripts": {
+    "watch": "webpack --progress --watch",
+    "start": "webpack-dev-server --open",
+    "build": "webpack",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": {
+    "name": "Jack John",
+    "url": "https://github.com/JackJohnG"
+  },
+  "license": "MIT",
+  "dependencies": {
+    "vue": "^2.5.9",
+    "vue-router": "^3.0.1",
+    "vuex": "^3.0.1"
+  },
+  "devDependencies": {
+    "css-loader": "^0.28.7",
+    "extract-loader": "^1.0.1",
+    "file-loader": "^1.1.5",
+    "html-loader": "^0.5.1",
+    "ts-loader": "^3.2.0",
+    "typescript": "^2.6.2",
+    "vue-loader": "^13.5.0",
+    "vue-template-compiler": "^2.5.9",
+    "webpack": "^3.10.0",
+    "webpack-dev-server": "^2.9.7"
+  }
+}
