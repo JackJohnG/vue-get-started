@@ -6,7 +6,7 @@
   "main": "index.js",
   "scripts": {
     "watch": "webpack --progress --watch",
-    "start": "webpack-dev-server --open",
+    "start": "webpack --watch",
     "build": "webpack",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
@@ -26,6 +26,8 @@
     "extract-loader": "^1.0.1",
     "file-loader": "^1.1.5",
     "html-loader": "^0.5.1",
+    "live-server": "^1.2.0",
+    "on-build-webpack": "^0.1.0",
     "ts-loader": "^3.2.0",
     "typescript": "^2.6.2",
     "vue-loader": "^13.5.0",

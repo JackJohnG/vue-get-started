@@ -1,5 +1,17 @@
-let path = require('path')
-let webpack = require('webpack')
+let path = require('path');
+let webpack = require('webpack');
+let WebpackOnBuildPlugin = require('on-build-webpack');
+
+let liveServer = require('live-server');
+
+let params = {
+    root: './dist',
+    file: 'index.html',
+    wait: 100,
+    port: 8080
+};
+
+let serverStarted = false;
 
 module.exports = {
     entry: './src/index.ts',
@@ -51,11 +63,14 @@ module.exports = {
             'vue$': 'vue/dist/vue.esm.js'
         }
     },
-    devServer: {
-        contentBase: path.join(__dirname, 'dist'),
-        port: 9000
-    },
-    devtool: 'inline-source-map'
+    devtool: 'inline-source-map',
+    plugins: [
+        new WebpackOnBuildPlugin(function(stats) {
+            if(serverStarted) return;
+            liveServer.start(params);
+            serverStarted = true;
+        }),
+    ]
 };
 
 if (process.env.NODE_ENV === 'production') {

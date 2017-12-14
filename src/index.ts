@@ -1,18 +1,12 @@
 import Vue from "vue";
-import HelloComponent from "./components/Hello.vue";
 
 import './index.html';
+import {router} from "./router/router";
 
-let v = new Vue({
-    el: "#app",
-    template: `
-    <div>
-        Name: <input v-model="name" type="text">
-        <hello-component :name="name" :initialEnthusiasm="5" />
-    </div>
-    `,
-    data: { name: "World" },
-    components: {
-        HelloComponent
-    }
-});
+import PageTrackerComponent from './components/pageTracker.component.vue';
+
+Vue.component('page-tracker', PageTrackerComponent);
+
+const app = new Vue({
+    router
+}).$mount('#app')

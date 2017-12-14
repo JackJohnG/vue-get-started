@@ -3,10 +3,15 @@ import Vuex from 'vuex';
 
 Vue.use(Vuex);
 
-Vue.use(Vuex);
-
-export default new Vuex.Store({
+const store = new Vuex.Store({
     state: {
-        myValue: 0
+        currentPage: 0
+    },
+    mutations: {
+        setPage (state, val) {
+            state.currentPage = val;
+        }
     }
 });
+
+export default store;
