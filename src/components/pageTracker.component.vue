@@ -1,9 +1,9 @@
 <template>
     <div>
-        <div>The current page is {{pageNum}}</div>
-        <router-link to="/">Go to Main</router-link>
-        <router-link to="/foo">Go to Foo</router-link>
-        <router-link to="/bar">Go to Bar</router-link>
+        <div>The current page is {{currentPage}}</div>
+        <router-link to="/">Go to Main Page</router-link>
+        <router-link to="/page2">Go to Page 2</router-link>
+        <router-link to="/page3">Go to Page 3</router-link>
     </div>
 </template>
 <script lang="ts">
@@ -12,7 +12,7 @@
 
     let PageTrackerComponent = Vue.extend({
         computed: {
-            pageNum: function () {
+            currentPage: function () {
                 return store.state.currentPage
             }
         }

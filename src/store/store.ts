@@ -8,7 +8,7 @@ const store = new Vuex.Store({
         currentPage: 0
     },
     mutations: {
-        setPage (state, val) {
+        setPage(state, val) {
             state.currentPage = val;
         }
     }

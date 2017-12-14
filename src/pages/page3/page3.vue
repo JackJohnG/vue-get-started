@@ -1,7 +1,6 @@
 <template>
     <div>
-        <div>this is another page {{pageNumber}}</div>
-        <!--<button @click="goToFoo()">Go to Foo</button>-->
+        <div>This is Page {{pageNumber}}</div>
     </div>
 </template>
 <script lang="ts">
@@ -11,11 +10,6 @@
         data() {
             return {
                 pageNumber: 3
-            }
-        },
-        methods: {
-            goToFoo() {
-                this.$router.push('foo');
             }
         }
     });

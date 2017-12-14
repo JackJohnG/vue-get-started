@@ -1,5 +1,5 @@
 <template>
-    <div>this is page {{pageNumber}}</div>
+    <div>This is Page {{pageNumber}}</div>
 </template>
 <script lang="ts">
     import Vue from 'vue';
